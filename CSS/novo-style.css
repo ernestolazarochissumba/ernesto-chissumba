@@ -1,0 +1,283 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    /* aumente para exibir imagens maiores */
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn-jogo {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-jogo:hover {
+    background-color: #0077cc;
+}
+
+.slides img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 600px;
+    /* aumenta a altura máxima */
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 20px;
+    /* espaço entre imagens */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Header estilizado e atrativo */
+
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* gradiente escuro bonito */
+    color: white;
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+footer input,
+footer textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer button {
+    background-color: #005f99;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #004d80;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.categorias-jogos {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.categoria {
+    flex: 1;
+    min-width: 220px;
+    max-width: 25%;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.jogo-card {
+    text-align: center;
+}
+
+.jogo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.detalhes {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .categorias-jogos {
+        flex-direction: column;
+    }
+    .categoria {
+        max-width: 100%;
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background-color: #111;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-contato,
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-contato h2,
+.footer-info h2 {
+    margin-bottom: 15px;
+    color: #00aaff;
+}
+
+.footer-contato form input,
+.footer-contato form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+}
+
+.footer-contato form input:focus,
+.footer-contato form textarea:focus {
+    box-shadow: 0 0 6px #00aaff;
+}
+
+.footer-contato button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-contato button:hover {
+    background-color: #0077cc;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+.footer-info a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-info a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
